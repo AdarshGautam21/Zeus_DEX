@@ -4,9 +4,9 @@ import { useState, ChangeEvent, useEffect } from "react";
 import { ethers } from "ethers";
 
 const swapContractAddress = "";
-const usdtAddress = "";
-const usdcAddress = "";
-const daiAddress = "";
+const usdtAddress = "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9";
+const usdcAddress = "0xaf88d065e77c8cC2239327C5EDb3A432268e5831";
+const daiAddress = "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1";
 
 const providerOptions = {};
 
@@ -70,11 +70,11 @@ export default function Home() {
     let tokenFromAdd = "";
     let tokenToAdd = "";
 
-    if (tokenFrom == "USDT") tokenFromAdd = usdcAddress;
+    if (tokenFrom == "USDT") tokenFromAdd = usdtAddress;
     else if (tokenFrom == "DAI") tokenFromAdd = daiAddress;
     else tokenFromAdd = usdcAddress;
 
-    if (tokenTo == "USDT") tokenToAdd = usdcAddress;
+    if (tokenTo == "USDT") tokenToAdd = usdtAddress;
     else if (tokenTo == "DAI") tokenToAdd = daiAddress;
     else tokenToAdd = usdcAddress;
 
